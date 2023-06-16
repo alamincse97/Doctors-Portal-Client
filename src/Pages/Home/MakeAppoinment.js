@@ -1,15 +1,20 @@
 import React from 'react';
+import appointment from '../../assets/images/appointment.png';
 import doctor from '../../assets/images/doctor.png';
+import PrimaryButton from '../Shared/PrimaryButton';
 
 const MakeAppoinment = () => {
     return (
-        <section className='flex'>
-            <div>
+        <section style={{
+            background: `url(${appointment})`}}
+            className='flex justify-center items-center'>
+            <div className='flex-1'>
                 <img src={doctor} alt="" />
             </div>
-            <div>
+            <div className='flex-1'>
                 <h3 className='text-xl text-primary'>Appointment</h3>
-                <p>
+                <h2 className='text-3xl text-white'>Make an Appointment Today</h2>
+                <p className='text-white'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
                     molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
                     numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
@@ -17,6 +22,7 @@ const MakeAppoinment = () => {
                     obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
                     nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat
                 </p>
+                <PrimaryButton>Get Started</PrimaryButton>
             </div>
         </section>
     );
